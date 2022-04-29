@@ -1,0 +1,16 @@
+\newenvironment{datelist}
+{
+    \begingroup
+    \setlength{\tabcolsep}{0mm} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} % Default value: 1
+	\begin{tabular}{l l}
+}
+{
+	\end{tabular}
+	\endgroup
+}
+
+\newcommand{\dateentry}[2]
+{
+	\parbox[t]{0.09\textwidth}{\small{#1}} & \parbox[t]{0.86\textwidth}{#2} \\
+}

@@ -1,0 +1,11 @@
+\usepackage{hyperref}
+
+\hypersetup{
+	colorlinks=true, % Whether to color the text of links
+	urlcolor=linkcolor, % Color for \url and \href links
+	linkcolor=linkcolor, % Color for \nameref links
+}
+
+\newcommand{\linkage}[2]{
+    \href{#1}{#2\textsuperscript{\space\space \scriptsize \faLink}}
+}

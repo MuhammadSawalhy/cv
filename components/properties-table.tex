@@ -1,0 +1,10 @@
+\newenvironment {properties} {
+    \begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+} {
+    \end{tabularx}
+}
+
+\newcommand{\gray}{\rowcolor[gray]{.95}}
+\newcommand{\property}[2]{
+    \gray \textbf{#1} & #2 \\
+}

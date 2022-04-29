@@ -1,0 +1,371 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (September 10, 2021)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Stefano (https://www.kindoblue.nl)
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, oneside, final]{scrartcl} % Paper options using the scrartcl class
+
+\usepackage{scrlayer-scrpage} % Provides headers and footers configuration
+\usepackage{titlesec} % Allows creating custom \section's
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{ebgaramond} % Use the EB Garamond font
+\usepackage{paracol}
+\usepackage{microtype} % To enable letterspacing
+\usepackage{fontawesome5}
+\usepackage{keycommand}
+\usepackage{layouts}
+\usepackage{import}
+\import{utilities/}{setup.tex}
+\import{utilities/}{colors.tex}
+\import{utilities/}{hyperref.tex}
+\import{components/}{items.tex}
+\import{components/}{datelist.tex}
+\import{components/}{entrylist.tex}
+\import{components/}{entry_work-experience.tex}
+\import{components/}{properties-table.tex}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{center} % Center everything in the document
+
+%----------------------------------------------------------------------------------------
+%	HEADER SECTION
+%----------------------------------------------------------------------------------------
+
+{\fontsize{36}{36} \selectfont\scshape{Muhammad As-Sawalhy}}
+
+\vspace{0.4cm}
+
+{\Large\Letter}
+\href{mailto:MuhammadSawalhy@gmail.com} {MuhammadSawalhy@gmail.com}
+{\large\textperiodcentered}
+{\faPhone} \href{tel:+201096390741}{+201096390741}
+
+\faGithub
+\href{https://github.com/MuhammadSawalhy}
+{@MuhammadSawalhy}
+{\large\textperiodcentered}
+\faLinkedin
+\href{https://linkedin.com/in/MuhammadSawalhy}{@MuhammadSawalhy}
+
+{\faMapMarker}
+Abou-Kabir {\large\textperiodcentered} Ash-Sharkia {\large\textperiodcentered} Egypt
+
+\vspace{0.8cm}
+
+%----------------------------------------------------------------------------------------
+%	Profile
+%----------------------------------------------------------------------------------------
+
+\section{Profile}
+
+A software engineer who is obsessed with coding and figuring out how the internals of his PC work. I can create the GUI for your app (particularly with ReactJS) and also have experience with developing APIs with Django and NodeJs. I also have experience with automation with shell and python scripts or even tools like Integromat and Zapier.
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{August 2021 --- Present}\\
+\gray Employer & \textbf{SciCave team} - \footnotesize{freelancing team of me and some friends}\\
+\gray Job Title & \textbf{Frontend Engineer}\\
+\gray Stack & \textbf{ReactJS \& Django}\\
+\end{tabularx}
+\begin{items}
+    \item Led the front-end development.
+    \item Designed prototypes using Figma.
+    \item Deployed web apps using docker and ssh to access the remote server.
+    \item Helped with some tasks at the backend side with Django.
+\end{items}
+
+\vspace{12pt}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{2016 summer}\\
+\gray Job Title & \textbf{Weighbridge Operator}\\
+\end{tabularx}
+\begin{items}
+    \item Operated the weighbridge.
+    \item Issued tickets.
+\end{items}
+
+%-------------------------------------------------------------------------------------
+%	Honors & Awards
+%-------------------------------------------------------------------------------------
+
+\section{Honors \& Awards}
+
+\begin{datelist}
+    \dateentry {2022}
+    {Recognized as best member of \linkage{https://www.linkedin.com/company/zagengfamily/}{ZagEng}'s IT Committee.}
+
+    \dateentry {2019}
+    {Honored by \linkage{http://www.mtc.edu.eg/mtcwebsite/Index.aspx}{MTC (Military Technical College - Egypt)} for being one of the top high school students.}
+\end{datelist}
+
+%----------------------------------------------------------------------------------------
+%	Activities & Volunteering
+%----------------------------------------------------------------------------------------
+
+\section{Activities \& Volunteering}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{November 2021 --- present}\\
+\gray Role & \textbf{IT Committee Member}\\
+\gray Place & \textbf{ZagEng students team} \hfill At Zagzig University
+\end{tabularx}
+\begin{items}
+    \item Recognized as the best member in the committee.
+    \item Maintained a telegram bot for the 1st year civil engineering students.
+    \item Automated some of the processes and routines with python code.
+    \item Built a web app with Django to automate sending messages to multiple bots at once.
+    \item Automated sending messages at specific times daily with Integromat.
+\end{items}
+
+%-------------------------------------------------------------------------------------
+%	EDUCATION
+%-------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{2019 --- 2024}\\
+\gray University & \textbf{Zagazig University} \hfill Az-Zagazig, Ash-Sharkia, Egypt\\
+\gray Major & \textbf{Bachelor of engineering} \hfill electrical department\\
+\gray Grade & \textbf{Excellent}  \hfill for the past 5 semesters\\
+%& Extra information about degree
+\end{tabularx}
+
+% \vspace{12pt}
+
+% \begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+% \gray Period & \textbf{August 2008 --- September 2010}\\
+% \gray Degree & \textbf{Bachelor of Science in Computer Science}\\
+% \gray Rank & \textbf{With Distinction}\\
+% \gray University & \textbf{New York University} \hfill New York, USA\\
+% %& Extra information about degree
+% \end{tabularx}
+
+%--------------------------------------------------------------------------------------
+%	SKILLS
+%--------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\begin{tabularx}{0.95\textwidth}{ @{} >{\bfseries}l | @{\hspace{6ex}} l l l}
+% \toprole \\
+Programming Languages  & JavaScipt & Python & Java \\
+                       & CPP & Shell Script & \LaTeX \\
+\\ \hline \\
+Frontend & Prototyping & Webpack  & Monorepos \\
+         & Testing \& Jest & ReactJS & Nodejs \\
+         & JS & CSS & Sass \\
+         & APIs \& RESTful JSON \& Yaml & \\
+\\ \hline \\
+Tools   & Docker & Git  & GNU tools \\
+        & Vim \& Neovim & Tmux & Teminals \\
+        & SSH \& GPG & & \\
+% \\ \hline
+\end{tabularx}
+
+%-------------------------------------------
+%	Projects
+%-------------------------------------------
+
+\section{Projects}
+ 
+% \begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+% \property {Project} {}
+% \property {Period} {}
+% \property {Tech's} {}
+% \property {Size} {}
+% \end{tabularx}
+
+% \vspace{2mm}
+% \parbox{0.95\linewidth}{%
+% Dashboard to control multiple telegram bots and send messages to all of them at once.
+% }%
+
+% %--------------------------------------------
+% \vspace{20pt}
+% %--------------------------------------------
+
+\begin{paracol}{2}
+
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {\linkage{https://github.com/MuhammadSawalhy/da7ee7-bot-dashboard}{Da7ee7 Bot Dashboard}}
+\property {Period} {2022}
+\property {Tech's} {Django, Javascript, CSS Bootstrap, HTML5}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+Dashboard to control multiple telegram bots and send messages to all of them at once.
+}%
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {Trafic light with ICs}
+\property {Period} {2022}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+This project was required by the faculty. A finite state machine (Moore machine) as a practice of the logic design course. I used basic logic gates such as \textsc{AND}, \textsc{OR}, \textsc{XOR}, and the story's hero \textsc{D flip-flop} which will maintain the state.
+}%
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {BCD counter}
+\property {Period} {2022}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+This project was required by the faculty. A counter that counts from 0 to 9 and starts all over again from 0 was required to be designed and implemented using logic gates and the principles and concepts learnt from the logic design course.
+}%
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {Mokhalasa web app}
+\property {Period} {2021-2022}
+\property {Tech's} {ReactJs, Sass, Django, PostgresDB}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+Web app for \linkage{https://mokalasah.com/}{Mokhalasa} collection agency to help manage their partners and clients and assign tasks to empolyees and keep track of how much debt they collected.
+}%
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {\linkage{https://aliflang.org/}{Alif Programming Language}}
+\property {Period} {2021 - Present \scriptsize{| Discontinuous}}
+\property {Tech's} {Python, CSS, JavaScript, Shell Scripts}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+Contributed to Alif programming language implement the testing scripts and add some tests to help detect bugs and problem at early stage. I also build a website for documentation and an online editor.
+}%
+
+
+\switchcolumn
+
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {Audio amplifier using a BJT (transistor)}
+\property {Period} {2021}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+This project was part of a faulty course, which required us to amplify and increase the audio sound level so we can here low phone sound from an audio jack to a speaker which we can here meters away from the phone and speaker.
+}%
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {\linkage{https://github.com/arabi-js/arabi}{ArabiJS Programming Language}}
+\property {Period} {2021}
+\property {Tech's} {JavaScript}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+ArabiJS is a Javascript arabization which uses arabic keyword and translated builtin and standard APIs in addition to ability to translate third-party librarys which simple few lines of code.
+}%
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {\linkage{https://www.npmjs.com/package/@scicave/math-latex-parser}{\LaTeX Math Parser} \& \linkage{https://www.npmjs.com/package/@scicave/math-parser}{Math Parser}}
+\property {Period} {2020 - 2021}
+\property {Tech's} {JavaScript, PEG.js}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+A parser generated by PEG.js by providing the parsing rules in the PEG.js language. One parser for \LaTeX math expressions and another one for regular human readable math expressions.
+}%
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {Plotto}
+\property {Period} {2019-2021 \scriptsize{| Discontinuous}}
+\property {Tech's} {Sass, JavaScript, Gulp, PugJS}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{%
+Graphing calculator to plot explicit mathematical functions and many other feature include adding point, drawing geometric shapes, and animation.
+}%
+\begin{items}
+\item Microsoft Store app: \url{https://bit.ly/plotto-win-app}
+\item Web app: \url{https://bit.ly/plotto-web-app}
+\end{items}
+
+%--------------------------------------------
+\vspace{20pt}
+%--------------------------------------------
+
+\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
+\property {Project} {\linkage{https://graphmaker.netlify.app/}{GraphMaker website}}
+\property {Date} {2019}
+\property {Tech's} {HTML, CSS, JavaScript}
+\end{tabularx}
+
+\vspace{2mm}
+\parbox{0.95\linewidth}{
+A website of an app to view screenshots and download it.
+}
+
+
+\end{paracol}
+
+%----------------------------------------------------------------------------------------
+
+\end{center}
+
+\end{document}
