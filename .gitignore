@@ -1,0 +1,6 @@
+*
+!utilities/
+!components/
+!*.tex
+!.gitignore
+!Makefile
