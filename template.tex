@@ -1,26 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Stylish Curriculum Vitae
-% LaTeX Template
-% Version 1.1 (September 10, 2021)
-%
-% This template originates from:
-% https://www.LaTeXTemplates.com
-%
-% Authors:
-% Stefano (https://www.kindoblue.nl)
-% Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, oneside, final]{scrartcl}
 
-\documentclass[a4paper, oneside, final]{scrartcl} % Paper options using the scrartcl class
-
-\usepackage{scrlayer-scrpage} % Provides headers and footers configuration
 \usepackage{titlesec} % Allows creating custom \section's
 \usepackage{marvosym} % Allows the use of symbols
-\usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{tabularx,colortbl,multirow} % Advanced table configurations
 \usepackage[T1]{fontenc}
 \usepackage[default]{gillius}
 \usepackage{paracol}
@@ -102,20 +84,20 @@ A software engineer who is obsessed with coding and figuring out how the interna
     \end{items}
 }
 
-%----------------
-\entriesdelimiter
-%----------------
-
-\work[
-    period=2016 summer,
-    title=Weighbridge Operator,
-]{
-    \begin{items}
-    \item Operated the weighbridge.
-    \item Issued tickets.
-    \end{items}
-}
-
+% %----------------
+% \entriesdelimiter
+% %----------------
+%
+% \work[
+%     period=2016 summer,
+%     title=Weighbridge Operator,
+% ]{
+%     \begin{items}
+%     \item Operated the weighbridge.
+%     \item Issued tickets.
+%     \end{items}
+% }
+%
 \end{entrylist}
 
 %-------------------------------------------------------------------------------------
@@ -183,21 +165,26 @@ A software engineer who is obsessed with coding and figuring out how the interna
 
 \section{Skills}
 
-\begin{tabularx}{0.95\textwidth}{ @{} >{\bfseries}l | @{\hspace{6ex}} l l l}
-% \toprole \\
-Programming Languages  & JavaScipt        & Python        & Java \\
-                       & CPP              & Shell Script  & \LaTeX \\
-\\ \hline \\
-Frontend               & Prototyping      & Webpack       & Monorepos \\
-                       & Testing \& Jest  & ReactJS       & Nodejs \\
-                       & JS               & CSS           & Sass \\
-                       & APIs \& RESTful  & JSON \& Yaml  & \\
-\\ \hline \\
-Tools                  & Docker           & Git           & GNU tools \\
-                       & Vim \& Neovim    & Tmux          & Teminals \\
-                       & SSH \& GPG       &               & \\
-% \\ \hline
+\begingroup
+\renewcommand{\arraystretch}{1.3} % Default value: 1
+\begin{tabularx}{0.95\textwidth}{ @{} >{\bfseries}p{3cm} | @{\hspace{6ex}} l l l}
+    \multirow{2}*{\parbox{3cm}{Programming Languages}}
+    & JavaScipt        & Python        & Java \\
+    & CPP              & Shell Script  & \LaTeX \\
+    \\[-5mm] \hline \\[-5mm]
+    \multirow{4}*{\parbox{3cm}{Frontend}}
+    & Prototyping      & Webpack       & Monorepos \\
+    & Testing \& Jest  & ReactJS       & Nodejs \\
+    & JS               & CSS           & Sass \\
+    & APIs \& RESTful  & JSON \& Yaml  & \\
+    \\[-5mm] \hline \\[-5mm]
+    \multirow{3}*{\parbox{3cm}{Tools}}
+    & Docker           & Git           & GNU tools \\
+    & Vim \& Neovim    & Tmux          & Teminals \\
+    & SSH \& GPG       &               & \\
+    % \\ \hline
 \end{tabularx}
+\endgroup
 
 %-------------------------------------------
 %	Projects
