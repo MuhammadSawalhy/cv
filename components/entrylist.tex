@@ -1,9 +1,18 @@
+\usepackage{fancybox}
 \newenvironment{entrylist}
 {
-    \begin{tabular}{l}
+  \begingroup
+  \setlist{leftmargin=*, topsep=0pt}
 }
 {
-    \end{tabular}
+  \endgroup
 }
 
-\newcommand{\entriesdelimiter}{\\}
+\newcommand{\entriesdelimiter}{\vspace{15pt}}
+\newcommand{\entrydescription}[1]{
+  \vspace{-5pt}
+  \setlength{\parindent}{2mm}
+  \parbox[t]{\linewidth}{
+    #1
+  }
+}

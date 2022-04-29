@@ -23,6 +23,7 @@
 \usepackage{tabularx,colortbl} % Advanced table configurations
 \usepackage{ebgaramond} % Use the EB Garamond font
 \usepackage{paracol}
+\usepackage{enumitem}
 \usepackage{microtype} % To enable letterspacing
 \usepackage{fontawesome5}
 \usepackage{keycommand}
@@ -34,7 +35,9 @@
 \import{components/}{items.tex}
 \import{components/}{datelist.tex}
 \import{components/}{entrylist.tex}
-\import{components/}{entry_work-experience.tex}
+\import{components/}{entry_work.tex}
+\import{components/}{entry_education.tex}
+\import{components/}{entry_volunteering.tex}
 \import{components/}{properties-table.tex}
 
 %----------------------------------------------------------------------------------------
@@ -98,6 +101,10 @@ A software engineer who is obsessed with coding and figuring out how the interna
     \end{items}
 }
 
+%----------------
+\entriesdelimiter
+%----------------
+
 \work[
     period=2016 summer,
     title=Weighbridge Operator,
@@ -130,18 +137,23 @@ A software engineer who is obsessed with coding and figuring out how the interna
 
 \section{Activities \& Volunteering}
 
-\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{November 2021 --- present}\\
-\gray Role & \textbf{IT Committee Member}\\
-\gray Place & \textbf{ZagEng students team} \hfill At Zagzig University
-\end{tabularx}
-\begin{items}
-    \item Recognized as the best member in the committee.
-    \item Maintained a telegram bot for the 1st year civil engineering students.
-    \item Automated some of the processes and routines with python code.
-    \item Built a web app with Django to automate sending messages to multiple bots at once.
-    \item Automated sending messages at specific times daily with Integromat.
-\end{items}
+\begin{entrylist}
+
+    \volunteering[
+        period=November 2021 --- present,
+        role=IT Committee Member,
+        organization=\linkage{https://www.linkedin.com/company/zagengfamily/}{ZagEng Team},
+    ]{
+        \begin{items}
+        \item Recognized as the best member in the committee.
+        \item Maintained a telegram bot for the 1st year civil engineering students.
+        \item Automated some of the processes and routines with python code.
+        \item Built a web app with Django to automate sending messages to multiple bots at once.
+        \item Automated sending messages at specific times daily with Integromat.
+        \end{items}
+    }
+
+\end{entrylist}
 
 %-------------------------------------------------------------------------------------
 %	EDUCATION
@@ -149,23 +161,20 @@ A software engineer who is obsessed with coding and figuring out how the interna
 
 \section{Education}
 
-\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-\gray Period & \textbf{2019 --- 2024}\\
-\gray University & \textbf{Zagazig University} \hfill Az-Zagazig, Ash-Sharkia, Egypt\\
-\gray Major & \textbf{Bachelor of engineering} \hfill electrical department\\
-\gray Grade & \textbf{Excellent}  \hfill for the past 5 semesters\\
-%& Extra information about degree
-\end{tabularx}
+\begin{entrylist}
 
-% \vspace{12pt}
+    \education[
+        period=2019 --- 2024 expected,
+        degree=Bachelor of Engineering,
+        major=Electrical Engineering Department,
+        authority=Zagazig University,
+    ]{
+        \begin{items}
+        \item Got excellent (A-) for the past 5 semesters.
+        \end{items}
+    }
 
-% \begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
-% \gray Period & \textbf{August 2008 --- September 2010}\\
-% \gray Degree & \textbf{Bachelor of Science in Computer Science}\\
-% \gray Rank & \textbf{With Distinction}\\
-% \gray University & \textbf{New York University} \hfill New York, USA\\
-% %& Extra information about degree
-% \end{tabularx}
+\end{entrylist}
 
 %--------------------------------------------------------------------------------------
 %	SKILLS
@@ -175,17 +184,17 @@ A software engineer who is obsessed with coding and figuring out how the interna
 
 \begin{tabularx}{0.95\textwidth}{ @{} >{\bfseries}l | @{\hspace{6ex}} l l l}
 % \toprole \\
-Programming Languages  & JavaScipt & Python & Java \\
-                       & CPP & Shell Script & \LaTeX \\
+Programming Languages  & JavaScipt        & Python        & Java \\
+                       & CPP              & Shell Script  & \LaTeX \\
 \\ \hline \\
-Frontend & Prototyping & Webpack  & Monorepos \\
-         & Testing \& Jest & ReactJS & Nodejs \\
-         & JS & CSS & Sass \\
-         & APIs \& RESTful JSON \& Yaml & \\
+Frontend               & Prototyping      & Webpack       & Monorepos \\
+                       & Testing \& Jest  & ReactJS       & Nodejs \\
+                       & JS               & CSS           & Sass \\
+                       & APIs \& RESTful  & JSON \& Yaml  & \\
 \\ \hline \\
-Tools   & Docker & Git  & GNU tools \\
-        & Vim \& Neovim & Tmux & Teminals \\
-        & SSH \& GPG & & \\
+Tools                  & Docker           & Git           & GNU tools \\
+                       & Vim \& Neovim    & Tmux          & Teminals \\
+                       & SSH \& GPG       &               & \\
 % \\ \hline
 \end{tabularx}
 
