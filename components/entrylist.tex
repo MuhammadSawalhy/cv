@@ -2,18 +2,22 @@
 \newenvironment{entrylist}
 {
   \begingroup
-  % for now, all descriptions are items list
-  \setlist{leftmargin=*, topsep=0pt}
+  % % 2mm, the same as \parindent
+  % \setlist{leftmargin=*, topsep=0pt}
+  % \addtolength{\leftmargini}{2mm}
+  \setlist{topsep=0pt}
+  \setlength{\extrarowheight}{20pt}
+  \vspace{-20pt}
+  \begin{tabular}{l}
 }
 {
+  \end{tabular}
   \endgroup
 }
 
-\newcommand{\entriesdelimiter}{\vspace{15pt}}
+\newcommand{\entriesdelimiter}{\\}
 \newcommand{\entrydescription}[1]{
-  \vspace{-5pt}
-  \setlength{\parindent}{2mm}
-  \parbox[t]{\linewidth}{
-    #1
-  }
+  \setlength{\parindent}{4mm}
+  \setlength{\parskip}{2mm}
+  #1
 }

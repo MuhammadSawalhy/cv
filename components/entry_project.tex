@@ -1,0 +1,21 @@
+\newkeycommand\project[period,techs,name,url][1]
+{
+    \parbox[t]{0.95\linewidth}
+    {
+        \ifcommandkey{url}{
+            \linkage{\commandkey{url}}{\textbf{\commandkey{name}}}
+        }{
+            \textbf{\commandkey{name}}
+        }
+        \hfill \commandkey{period}
+
+        \ifcommandkey{techs}{
+            \textcolor{black!70}{\textit{\footnotesize\commandkey{techs}}}
+
+            \entrydescription{#1}
+        }{
+            \entrydescription{#1}
+        }
+    }
+    \entriesdelimiter
+}

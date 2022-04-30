@@ -1,5 +1,6 @@
-\documentclass[a4paper, oneside, final]{scrartcl}
+\documentclass[legalpaper, oneside, final]{scrartcl}
 
+\usepackage[legalpaper]{geometry}
 \usepackage{titlesec} % Allows creating custom \section's
 \usepackage{marvosym} % Allows the use of symbols
 \usepackage{tabularx,colortbl,multirow} % Advanced table configurations
@@ -19,6 +20,7 @@
 \import{components/}{datelist.tex}
 \import{components/}{entrylist.tex}
 \import{components/}{entry_work.tex}
+\import{components/}{entry_project.tex}
 \import{components/}{entry_education.tex}
 \import{components/}{entry_volunteering.tex}
 \import{components/}{properties-table.tex}
@@ -84,20 +86,16 @@ A software engineer who is obsessed with coding and figuring out how the interna
     \end{items}
 }
 
-% %----------------
-% \entriesdelimiter
-% %----------------
-%
-% \work[
-%     period=2016 summer,
-%     title=Weighbridge Operator,
-% ]{
-%     \begin{items}
-%     \item Operated the weighbridge.
-%     \item Issued tickets.
-%     \end{items}
-% }
-%
+\work[
+    period=2016 summer,
+    title=Weighbridge Operator,
+]{
+    \begin{items}
+    \item Operated the weighbridge.
+    \item Issued tickets.
+    \end{items}
+}
+
 \end{entrylist}
 
 %-------------------------------------------------------------------------------------
@@ -147,7 +145,7 @@ A software engineer who is obsessed with coding and figuring out how the interna
 \begin{entrylist}
 
     \education[
-        period=2019 --- 2024 expected,
+        period={2019 --- 2024, expected},
         degree=Bachelor of Engineering,
         major=Electrical Engineering Department,
         authority=Zagazig University,
@@ -165,29 +163,22 @@ A software engineer who is obsessed with coding and figuring out how the interna
 
 \section{Skills}
 
-\begingroup
-\renewcommand{\arraystretch}{1.3} % Default value: 1
-\begin{tabularx}{0.95\textwidth}{ @{} >{\bfseries}p{3cm} | @{\hspace{6ex}} l l l}
-    \multirow{2}*{\parbox{3cm}{Programming Languages}}
-    & JavaScipt        & Python        & Java \\
-    & CPP              & Shell Script  & \LaTeX \\
-    \\[-5mm] \hline \\[-5mm]
-    \multirow{4}*{\parbox{3cm}{Frontend}}
-    & Prototyping      & Webpack       & Monorepos \\
-    & Testing \& Jest  & ReactJS       & Nodejs \\
-    & JS               & CSS           & Sass \\
-    & APIs \& RESTful  & JSON \& Yaml  & \\
-    \\[-5mm] \hline \\[-5mm]
-    \multirow{3}*{\parbox{3cm}{Tools}}
-    & Docker           & Git           & GNU tools \\
-    & Vim \& Neovim    & Tmux          & Teminals \\
-    & SSH \& GPG       &               & \\
-    % \\ \hline
+\begin{tabularx}{0.95\textwidth}{ @{} >{\bfseries}p{2.4cm} | @{\hspace{6ex}} X}
+    \parbox[t]{2.4cm}{Programming Languages}
+    & JavaScipt, Python, Java, CPP, Shell Script, \LaTeX \\
+    \\[-2mm] \hline \\[-2mm]
+
+    \parbox{2.4cm}{Frontend}
+    & Prototyping, Webpack, Monorepos, Testing \& Jest,
+    ReactJS, Nodejs, JS, CSS, Sass, APIs \& RESTful, JSON \& Yaml \\
+    \\[-2mm] \hline \\[-2mm]
+
+    \parbox{2.4cm}{Tools}
+    & Docker, Git, GNU tools, Vim \& Neovim, Tmux, Teminals, SSH \& GPG
 \end{tabularx}
-\endgroup
 
 %-------------------------------------------
-%	Projects
+% Projects
 %-------------------------------------------
 
 \section{Projects}
@@ -210,158 +201,100 @@ A software engineer who is obsessed with coding and figuring out how the interna
 
 \begin{paracol}{2}
 
+    \begin{entrylist}
+        \project[
+            name=Da7ee7 Bot Dashboard,
+            period=2022,
+            techs={Django, Javascript, CSS Bootstrap, HTML5},
+            url=https://github.com/MuhammadSawalhy/da7ee7-bot-dashboard
+        ]{
+            Dashboard to control multiple telegram bots and send messages to all of them at once.
+        }
 
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {\linkage{https://github.com/MuhammadSawalhy/da7ee7-bot-dashboard}{Da7ee7 Bot Dashboard}}
-\property {Period} {2022}
-\property {Tech's} {Django, Javascript, CSS Bootstrap, HTML5}
-\end{tabularx}
+        \project[
+            name=Trafic light with ICs,
+            period=2022,
+        ]{
+            This project was required by the faculty. A finite state machine (Moore machine) as a practice of the logic design course. I used basic logic gates such as \textsc{AND}, \textsc{OR}, \textsc{XOR}, and the story's hero \textsc{D flip-flop} which will maintain the state.
+        }
 
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-Dashboard to control multiple telegram bots and send messages to all of them at once.
-}%
+        \project[
+            name=BCD counter,
+            period=2022,
+        ]{
+            This project was required by the faculty. A counter that counts from 0 to 9 and starts all over again from 0 was required to be designed and implemented using logic gates and the principles and concepts learnt from the logic design course.
+        }
 
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
+        \project[
+            name=Mokhalasa web app,
+            period=2021-2022,
+            techs={ReactJs, Sass, Django, PostgresDB}
+        ]{
+            Web app for \linkage{https://mokalasah.com/}{Mokhalasa} collection agency to help manage their partners and clients and assign tasks to empolyees and keep track of how much debt they collected.
+        }
 
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {Trafic light with ICs}
-\property {Period} {2022}
-\end{tabularx}
+        \project[
+            name=Alif programming Language,
+            url=https://aliflang.org/,
+            period={2021 - Present {\scriptsize| Discontinuous,}},
+            techs={Python, CSS, JavaScript, Shell Scripts}
+        ]{
+            Contributed to Alif programming language implement the testing scripts and add some tests to help detect bugs and problem at early stage. I also build a website for documentation and an online editor.
+        }
+        
+    \end{entrylist}
 
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-This project was required by the faculty. A finite state machine (Moore machine) as a practice of the logic design course. I used basic logic gates such as \textsc{AND}, \textsc{OR}, \textsc{XOR}, and the story's hero \textsc{D flip-flop} which will maintain the state.
-}%
+    \switchcolumn
 
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
+    \begin{entrylist}
 
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {BCD counter}
-\property {Period} {2022}
-\end{tabularx}
+        \project[
+            name=Audio amplifier using a BJT (transistor),
+            period=2021,
+        ]{
+            This project was part of a faulty course, which required us to amplify and increase the audio sound level so we can here low phone sound from an audio jack to a speaker which we can here meters away from the phone and speaker.
+        }
 
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-This project was required by the faculty. A counter that counts from 0 to 9 and starts all over again from 0 was required to be designed and implemented using logic gates and the principles and concepts learnt from the logic design course.
-}%
+        \project[
+            name=ArabiJS Programming Language,
+            period=2021,
+            techs={JavaScript},
+            url=https://github.com/arabi-js/arabi,
+        ]{
+            ArabiJS is a Javascript arabization which uses arabic keyword and translated builtin and standard APIs in addition to ability to translate third-party librarys which simple few lines of code.
+        }
 
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
+        \project[
+            name=\TeX Math Parser \& Math Parser,
+            period=2020 - 2021,
+            url=https://www.npmjs.com/package/@scicave/math-latex-parser,
+            techs={JavaScript, PEG.js}
+        ]{
+            A parser generated by PEG.js by providing the parsing rules in the PEG.js language. One parser for \LaTeX math expressions and another one for regular human readable math expressions.
+        }
 
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {Mokhalasa web app}
-\property {Period} {2021-2022}
-\property {Tech's} {ReactJs, Sass, Django, PostgresDB}
-\end{tabularx}
+        \project[
+            name=Plotto,
+            period=2019-2021 {\scriptsize| Discontinuous},
+            techs={Sass, JavaScript, Gulp, PugJS}
+        ]{
+            Graphing calculator to plot explicit mathematical functions and many other feature include adding point, drawing geometric shapes, and animation.
 
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-Web app for \linkage{https://mokalasah.com/}{Mokhalasa} collection agency to help manage their partners and clients and assign tasks to empolyees and keep track of how much debt they collected.
-}%
+            \begin{items}
+            \item Microsoft Store app: \url{https://bit.ly/plotto-win-app}
+            \item Web app: \url{https://bit.ly/plotto-web-app}
+            \end{items}
+        }
 
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
-
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {\linkage{https://aliflang.org/}{Alif Programming Language}}
-\property {Period} {2021 - Present \scriptsize{| Discontinuous}}
-\property {Tech's} {Python, CSS, JavaScript, Shell Scripts}
-\end{tabularx}
-
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-Contributed to Alif programming language implement the testing scripts and add some tests to help detect bugs and problem at early stage. I also build a website for documentation and an online editor.
-}%
-
-
-\switchcolumn
-
-
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {Audio amplifier using a BJT (transistor)}
-\property {Period} {2021}
-\end{tabularx}
-
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-This project was part of a faulty course, which required us to amplify and increase the audio sound level so we can here low phone sound from an audio jack to a speaker which we can here meters away from the phone and speaker.
-}%
-
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
-
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
-
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {\linkage{https://github.com/arabi-js/arabi}{ArabiJS Programming Language}}
-\property {Period} {2021}
-\property {Tech's} {JavaScript}
-\end{tabularx}
-
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-ArabiJS is a Javascript arabization which uses arabic keyword and translated builtin and standard APIs in addition to ability to translate third-party librarys which simple few lines of code.
-}%
-
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
-
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {\linkage{https://www.npmjs.com/package/@scicave/math-latex-parser}{\LaTeX Math Parser} \& \linkage{https://www.npmjs.com/package/@scicave/math-parser}{Math Parser}}
-\property {Period} {2020 - 2021}
-\property {Tech's} {JavaScript, PEG.js}
-\end{tabularx}
-
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-A parser generated by PEG.js by providing the parsing rules in the PEG.js language. One parser for \LaTeX math expressions and another one for regular human readable math expressions.
-}%
-
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
-
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {Plotto}
-\property {Period} {2019-2021 \scriptsize{| Discontinuous}}
-\property {Tech's} {Sass, JavaScript, Gulp, PugJS}
-\end{tabularx}
-
-\vspace{2mm}
-\parbox{0.95\linewidth}{%
-Graphing calculator to plot explicit mathematical functions and many other feature include adding point, drawing geometric shapes, and animation.
-}%
-\begin{items}
-\item Microsoft Store app: \url{https://bit.ly/plotto-win-app}
-\item Web app: \url{https://bit.ly/plotto-web-app}
-\end{items}
-
-%--------------------------------------------
-\vspace{20pt}
-%--------------------------------------------
-
-\begin{tabularx}{0.95\linewidth}{>{\raggedleft\scshape}p{1.5cm}X}
-\property {Project} {\linkage{https://graphmaker.netlify.app/}{GraphMaker website}}
-\property {Date} {2019}
-\property {Tech's} {HTML, CSS, JavaScript}
-\end{tabularx}
-
-\vspace{2mm}
-\parbox{0.95\linewidth}{
-A website of an app to view screenshots and download it.
-}
-
+        \project[
+            name=GraphMaker website,
+            period=2019,
+            techs={HTML, CSS, JavaScript},
+            url=https://graphmaker.netlify.app/,
+        ]{
+            A website of an app to view screenshots and download it.
+        }
+    \end{entrylist}
 
 \end{paracol}
 

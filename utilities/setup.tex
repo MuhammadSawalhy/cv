@@ -2,7 +2,24 @@
 
 \pagestyle{empty} % Print the headers and footers on all pages
 
-\addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\voffset}{-3cm} % Adjust the vertical offset - less whitespace at the top of the page
 \addtolength{\textheight}{5cm} % Adjust the text height - less whitespace at the bottom of the page
 
 \setlength{\footskip}{0cm}
+
+
+% workaround a bug in keycommnad package
+% source: https://tex.stackexchange.com/a/35794/234939
+\begingroup
+  \makeatletter
+  \catcode`\/=8 %
+  \@firstofone
+    {
+      \endgroup
+      \renewcommand{\ifcommandkey}[1]{%
+        \csname @\expandafter \expandafter \expandafter 
+        \expandafter \expandafter \expandafter  \expandafter
+        \kcmd@nbk \commandkey {#1}//{first}{second}//oftwo\endcsname
+      }
+   } 
+
