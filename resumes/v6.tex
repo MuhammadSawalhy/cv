@@ -1,0 +1,318 @@
+\documentclass[legalpaper, oneside, final]{scrartcl}
+
+\usepackage[legalpaper, top=1in, bottom=1in]{geometry}
+\usepackage{titlesec} % Allows creating custom \section's
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl,multirow} % Advanced table configurations
+\usepackage[T1]{fontenc}
+\usepackage[default]{gillius}
+\usepackage{paracol}
+\usepackage{enumitem}
+\usepackage{microtype} % To enable letterspacing
+\usepackage{fontawesome5}
+\usepackage{keycommand}
+\usepackage{layouts}
+\usepackage{import}
+\import{utilities/}{setup.tex}
+\import{utilities/}{colors.tex}
+\import{utilities/}{hyperref.tex}
+\import{components/}{items.tex}
+\import{components/}{datelist.tex}
+\import{components/}{entrylist.tex}
+\import{components/}{entry_work.tex}
+\import{components/}{entry_project.tex}
+\import{components/}{entry_education.tex}
+\import{components/}{entry_volunteering.tex}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{center} % Center everything in the document
+
+%----------------------------------------------------------------------------------------
+%	HEADER SECTION
+%----------------------------------------------------------------------------------------
+
+{\fontsize{36}{36} \selectfont\scshape{Muhammad As-Sawalhy}}
+
+\vspace{0.4cm}
+
+{\Large\Letter}
+\href{mailto:MuhammadSawalhy@gmail.com} {Email}
+{\large\textperiodcentered}
+{\faPhone} \href{tel:+201096390741}{+201096390741}
+
+\faGithub
+\href{https://github.com/MuhammadSawalhy}
+{@MuhammadSawalhy}
+{\large\textperiodcentered}
+\faLinkedin
+\href{https://linkedin.com/in/MuhammadSawalhy}{@MuhammadSawalhy}
+
+{\faMapMarker}
+Abou-Kabir {\large\textperiodcentered} Ash-Sharkia {\large\textperiodcentered} Egypt
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{entrylist}
+
+\work[
+    period=August 2022 --- Present,
+    employer=bld.ai,
+    title=Software Engineering Intern,
+    skills=React.js \& Django
+]{
+    \begin{items}
+    \item Built clone of some pages of Udemy.com using React.js, the frontend framework.
+    \begin{items}
+    \item Used css modules to add style to pages.
+    \item Used tailwind as well to add styles to pages.
+    \end{items}
+    \item Built RESTful APIs with Django Rest Framework.
+    \end{items}
+}
+
+\work[
+    period=August 2021 --- Present,
+    employer=SciCave team,
+    title=Frontend developer,
+    skills=React.js \& Django
+]{
+    \begin{items}
+    \item Designed prototypes using Figma.
+    \item Facilitated components development with Storybook.
+    \item Configured custom build process with Webpack. 
+    \item Managed the remote deployment server using SSH
+    \item Used Docker to containerize the running app.
+    \end{items}
+}
+
+\end{entrylist}
+
+%-------------------------------------------------------------------------------------
+% EDUCATION
+%-------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{entrylist}
+
+    \education[
+        period={2019 --- 2024, expected},
+        degree=Bachelor of Engineering,
+        major=Computer Science and Systems,
+        authority=Zagazig University,
+    ]{
+        \begin{items}
+        \item Accumulative grade is \textbf{88.26\% (excellent)}.
+        \end{items}
+    }
+
+\end{entrylist}
+
+%--------------------------------------------------------------------------------------
+%	SKILLS
+%--------------------------------------------------------------------------------------
+
+\section{Skills}
+
+% \begin{tabularx}{0.95\textwidth}{ @{} >{\bfseries}p{2.4cm} | @{\hspace{6ex}} X}
+%     \parbox[t]{2.4cm}{Programming Languages}
+%     & JavaScipt, Python, Java, CPP, Shell Script, \LaTeX \\
+%     \\[-2mm] \hline \\[-2mm]
+%
+%     \parbox{2.4cm}{Web Development}
+%     & JS, CSS, Sass, APIs, RESTful APIs, JSON, Yaml, XML, ReactJS, Nodejs, Prototyping,
+%     Figma, Webpack, Monorepos, Testing, Jest, Django, SQL, JQuery, Bootstrap \\
+%     \\[-2mm] \hline \\[-2mm]
+%
+%     \parbox{2.4cm}{Tools}
+%     & Docker, Git, GNU tools, Vim \& Neovim, Tmux, Terminals, SSH \& GPG
+% \end{tabularx}
+
+\parbox{\linewidth} {
+JavaScipt, Python, C++, Shell Script, Java , CSS, Sass, RESTful APIs, ReactJS, Nodejs, Figma, Webpack, Monorepos, Testing, Jest, Django, SQL, Docker, Git
+}
+
+%-------------------------------------------------------------------------------------
+% Honors & Awards
+%-------------------------------------------------------------------------------------
+
+% \section{Honors \& Awards}
+%
+% \begin{datelist}
+%     \dateentry {2022}
+%     {Recognized as best member of \linkage{https://www.linkedin.com/company/zagengfamily/}{ZagEng}'s IT Committee.}
+%
+%     \dateentry {2019}
+%     {Honored by \linkage{http://www.mtc.edu.eg/mtcwebsite/Index.aspx}{MTC (Military Technical College - Egypt)} for being one of the top high school students.}
+% \end{datelist}
+
+%-------------------------------------------------------------------------------------
+% Certificates & Competitions
+%-------------------------------------------------------------------------------------
+
+\section{Certificates \& Competitions}
+
+\begin{datelist}
+    \dateentry {Nov 2022}
+    {\quad Hotaru 1.0 competition, \textbf{got 19 place} out of 120 teams}
+    \dateentry {Oct 2022}
+    {\quad IEEEXtreme 16.0 competition, \textbf{got 25 place} out of 127 teams}
+    \dateentry {Aug 2022}
+    {\quad ECPC competition, \textbf{got 68 place} out of 272 teams and qualified to regional competition ACPC}
+\end{datelist}
+
+%----------------------------------------------------------------------------------------
+% Activities & Volunteering
+%----------------------------------------------------------------------------------------
+
+\section{Activities \& Volunteering}
+
+\begin{entrylist}
+    \volunteering[
+        period=October 2022 --- present,
+        role=Level 1 Instructor,
+        organization=\linkage{https://www.linkedin.com/company/82489957/}{ICPC Zagazig University Community},
+    ]{
+        Instructor of level 1 teaching topics from Assiut university sheet. Each week there is a session. In this level I taught topics such as binary search, greedy algorithms, STL library, and much more.Instructor
+    }
+
+    \volunteering[
+        period=September 2022 --- present,
+        role=IT Committee Head,
+        organization=\linkage{https://www.linkedin.com/company/zagengfamily/}{ZagEng Team},
+    ]{
+        \begin{items}
+        \item Directed the committee to built 13+ telegram bots that help students get the learning materials.
+        \item Automated some of the processes and routines with python code.
+        \item Built a web app with Django to automate sending messages to multiple bots at once.
+        \item Automated sending messages at specific times daily with Integromat.
+        \end{items}
+    }
+\end{entrylist}
+
+%-------------------------------------------
+% Projects
+%-------------------------------------------
+
+% \clearpage
+%
+% \section{Projects}
+%
+% \textcolor{note}{\emph{These are projects I am proud of. A picked samples not all...}}
+%
+% \vspace{3mm}
+%
+% % FIXME: paracol doesn't break page if it is too long
+% \begin{paracol}{2}
+%
+%     \begin{entrylist}
+%         \project[
+%             name=Da7ee7 Bot Dashboard,
+%             period=2022,
+%             techs={Django, Javascript, CSS Bootstrap, HTML5},
+%             url=https://github.com/MuhammadSawalhy/da7ee7-bot-dashboard
+%         ]{
+%             Dashboard to control multiple telegram bots and send messages to all of them at once.
+%         }
+%
+%         \project[
+%             name=Trafic light with ICs,
+%             period=2022,
+%         ]{
+%             This project was required by the faculty. A finite state machine (Moore machine) as a practice of the logic design course. I used basic logic gates such as \textsc{AND}, \textsc{OR}, \textsc{XOR}, and the story's hero \textsc{D flip-flop} which will maintain the state.
+%         }
+%
+%         \project[
+%             name=BCD counter,
+%             period=2022,
+%         ]{
+%             This project was required by the faculty. A counter that counts from 0 to 9 and starts all over again from 0 was required to be designed and implemented using logic gates and the principles and concepts learnt from the logic design course.
+%         }
+%
+%         \project[
+%             name=Mokhalasa web app,
+%             period=2021-2022,
+%             techs={ReactJs, Sass, Django, PostgresDB}
+%         ]{
+%             Web app for \linkage{https://mokalasah.com/}{Mokhalasa} collection agency to help manage their partners and clients and assign tasks to employees with pages for statistics to keep track of how much debt they collected and what data is in the system.
+%         }
+%
+%         \project[
+%             name=Alif programming Language,
+%             url=https://aliflang.org/,
+%             period={2021 - Present {\scriptsize| Discontinuous,}},
+%             techs={Python, CSS, JavaScript, Shell Scripts}
+%         ]{
+%             Contributed to Alif programming language implement the testing scripts and add some tests to help detect bugs and problem at early stage. I also build a website for documentation and an online editor.
+%         }
+%         
+%     \end{entrylist}
+%
+%     \switchcolumn
+%
+%     \begin{entrylist}
+%
+%         \project[
+%             name=Audio amplifier using a BJT (transistor),
+%             period=2021,
+%         ]{
+%             This project was part of a faulty course, which required us to amplify and increase the audio sound level so we can here low phone sound from an audio jack to a speaker which we can here meters away from the phone and speaker.
+%         }
+%
+%         \project[
+%             name=ArabiJS Programming Language,
+%             period=2021,
+%             techs={JavaScript},
+%             url=https://github.com/arabi-js/arabi,
+%         ]{
+%             ArabiJS is a JavaScript arabization which uses Arabic keyword and translated builtin and standard APIs in addition to the ability to translate third-party libraries with just few lines of JSON configuration.
+%         }
+%
+%         \project[
+%             name=\TeX Math Parser \& Math Parser,
+%             period=2020 - 2021,
+%             url=https://www.npmjs.com/package/@scicave/math-latex-parser,
+%             techs={JavaScript, PEG.js}
+%         ]{
+%             A parser generated by PEG.js by providing the parsing rules in the PEG.js language. One parser for \LaTeX math expressions and another one for regular human readable math expressions.
+%         }
+%
+%         \project[
+%             name=Plotto,
+%             period=2019-2021 {\scriptsize| Discontinuous},
+%             techs={Sass, JavaScript, Gulp, PugJS}
+%         ]{
+%             Graphing calculator to plot explicit mathematical functions and many other feature include adding point, drawing geometric shapes, and animation.
+%
+%             \begin{items}
+%             \item Microsoft Store app: \url{https://bit.ly/plotto-win-app}
+%             \item Web app: \url{https://bit.ly/plotto-web-app}
+%             \end{items}
+%         }
+%
+%         \project[
+%             name=GraphMaker website,
+%             period=2019,
+%             techs={HTML, CSS, JavaScript},
+%             url=https://graphmaker.netlify.app/,
+%         ]{
+%             A website of an app to view screenshots and download it.
+%         }
+%     \end{entrylist}
+%
+% \end{paracol}
+%
+% %----------------------------------------------------------------------------------------
+%
+\end{center}
+%
+\end{document}

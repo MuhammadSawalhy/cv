@@ -1,9 +1,6 @@
 *
 
-!utilities/
-!components/
-!resume-patches/
-!resume-patches/*
+!*/
 
 !*.tex
 !.gitignore
